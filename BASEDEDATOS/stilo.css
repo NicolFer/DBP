@@ -1,0 +1,92 @@
+/* General Styles */
+body{
+    background-color: #93ccec;    
+    margin: 0;
+    justify-content: flex;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    vertical-align: middle;
+    }
+    form {
+        background-color: white;
+        border-radius: 30px;
+        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 400px;
+        max-width: 200%;
+        margin: 25px;
+        align-items: center;
+        display: auto;
+        vertical-align: middle;
+    }
+    h1 {
+        background-color: #579696;
+        height: auto;
+        align-items: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        justify-content: center;
+        padding: 20px;
+        color: white;
+        text-align: center;
+        display: flex;
+        margin: 0; /* Eliminar cualquier margen */
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="email"],
+    textarea,
+    select {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin: 10px 0 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    textarea {
+        height: 100px;
+    }
+    .contenedor {
+        background-color: #fdfdfd;
+        width: 70%;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        margin-top: 22px;
+        padding-bottom: 22px;
+        box-sizing: border-box;
+        }
+    
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin-right: 10px;
+    }
+    
+    input[type="submit"] {
+        background-color: #3B5998;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+    }
+    input[type="submit"]:hover {
+        background-color: #2d4373;
+    }
+    
+    /* Styles for Datalist */
+    datalist option {
+        padding: 5px;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 600px) {
+        form {
+            width: 100%;
+            padding: 15px;
+        }
+    }    
