@@ -1,4 +1,9 @@
+
+
 document.addEventListener('DOMContentLoaded', function() {
+
+
+
     const input = document.getElementById('input');
     const addButton = document.getElementById('boton-emter');
     const lista = document.getElementById('lista');
@@ -13,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     const formattedDate = currentDate.toLocaleDateString('es-ES', options);
     dateElement.textContent = formattedDate;
-
+    
     // Agregar tarea
     addButton.addEventListener('click', function() {
         agregarTareaDesdeInput();
@@ -130,4 +135,13 @@ document.addEventListener('DOMContentLoaded', function() {
         actualizarContadorTareasPendientes();
         ocultarTaskSection();
     });
+
+    document.getElementById("newTask").addEventListener("click", function(e) {
+        e.preventDefault();
+
+        addTask();
+    });
+
 });
+
+
