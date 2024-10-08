@@ -1,36 +1,130 @@
 
+
 :root{
-    --background:#31021f;
-    --secundaryBackground:#8505a1;
+    --background:#000430;
+    --secundaryBackground:#171c48;
     --text: #fff;
-    --purple: #8f82ff;
-    --teal: #0609a5;
+    --purple: #828dff;
+    --teal: #24feee;
 }
-body {
+body{
     background-color: var(--background);
     color: var(--text);
 }
-
-.container {
+.container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 500px;
+    max-width: 100%;
     margin: 120px auto 0 auto;
+
 }
 
+.stats-container{
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid var(--purple);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+.details{
+    width: 100%;
+}
+#progressBar{
+    width: 100%;
+    height: 10px;
+    background-color: var(--secundaryBackground);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+#progress{
+    width: 50%;
+    height: 10px;
+    background-color: var(--teal);
+    border-radius: 10px;
+    transition: all 0.3s case;
+}
+#numbers{
+    width: 100px;
+    height: 100px;
+    background-color: var(--purple);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+     border-radius: 50%;
+     font-size: 30px;
+     font-weight: bold;
+}
+
+form{
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+}
+input{
+    flex: 1;
+    padding: 16px;
+    background: var(--secundaryBackground);
+    border: 1px solid var(--purple);
+    border-radius: 10px;
+    outline: none;
+    color: var(--text);
+}
+
+#task-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top:  30px;
+    width: 100%;
+    list-style: none;
+}
+.taskItem{
+    display:  flex;
+    background-color: var(--secundaryBackground);
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.task{
+    display: flex;
+    align-items:center;
+    gap:10px;
+}
+.task input{
+    width: 20px;    
+    height: 20px;
+}
+.completed p{
+    text-decoration: line-through;
+    color:var(--teal)
+}
+.taskItem img{
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.title {
+    color: #3b7ba0;
+    font-size: 3%;
+}
 
 .title h1 {
     margin: 0;
-    font-size: 36px;
-    font-weight: 600;
-    color: #e9d6ee;
+    font-size: 40px;
+    font-weight: 800;
+    color: #a268e4;
 }
 
 .title span {
     font-size: 16px;
-    color: #efd6f5; 
+    color: #ffffff; 
 }
 
 
@@ -44,11 +138,11 @@ body {
 .add-task {
     display: flex;
     align-items:center;
-    gap:10px;
+    gap:30px;
 }
 
 .add-task input {
-    width: 20px;
+    width: 160px;
     height: 20px;
 }
 
@@ -57,23 +151,23 @@ body {
 }
 
 .add-task .iconoAdd {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 }
 
 .add-task .iconoAdd:hover {
     transform: scale(1.1);
 }
-
 .task-section {
     margin-top: 20px;
     padding: 15px;
-    background-color: rgba(81, 9, 122, 0.85); 
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: rgba(66, 111, 179, 0.76); 
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(156, 146, 146, 0.2);
 }
+
 
 ul {
     list-style-type: none;
@@ -84,7 +178,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.15); 
+    background-color: rgba(0, 0, 0, 0.15); 
     padding: 10px;
     border-radius: 8px;
     margin-bottom: 10px;
@@ -101,7 +195,7 @@ li p {
     flex-grow: 1;
     margin: 0 10px;
     text-align: left;
-    color: #d9e2ec; /* Azul claro que destaca sobre el fondo */
+    color: #7dabe0; /* Azul claro que destaca sobre el fondo */
     font-weight: 500;
 }
 
@@ -117,28 +211,24 @@ li img:hover {
 
 
 button {
-    padding:16px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    width: 100px;
+
+    padding: 10px;
     background-color: var(--purple);
     color: var(--text);
-    font-size: 30px;
-    font-weight: bold;
-    outline: none;
+    font-size: 10px;
     border:none;
+
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #c597eb; 
+    background-color: #1e0036; 
     transform: translateY(-3px);
 }
 
 .line-through {
     text-decoration: line-through;
-    color: #8c12f0; 
+    color: #01133a; 
 }
